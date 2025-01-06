@@ -10,6 +10,7 @@ export default {
         },
         {
             name: 'included',
+            type: 'array',
             title: 'Included Products',
             of: [
                 {

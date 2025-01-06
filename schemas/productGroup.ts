@@ -1,14 +1,26 @@
 
 export default {
-    name: 'group',
+    name: 'productGroup',
     type: 'document',
     title: 'Product Group',
-    of: [
+    fields: [
         {
-            type: 'reference',
-            to: [
-                {type: 'product'}
-            ]
-        }
-    ],
+            name: 'name',
+            title: 'Name of Group',
+            type: 'string',
+        },
+        {
+            name: 'groupProducts',
+            type: 'array',
+            title: 'Group Products',
+            of: [
+                {
+                    type: 'reference',
+                    to: [
+                        {type: 'product'}
+                    ]
+                }
+            ],
+        },
+    ]
 }
